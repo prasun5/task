@@ -25,22 +25,22 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
  
  # The general page breakdown looks like this:
  
- 1) Home page (URL:/users);
-    i. List of Users
+ 1) Home page (URL:/users);<br/>
+    i. List of Users<br/>
     
-    ![picture](img/task_user_list.png)
+    ![picture](src/assets/img/task_user_list.png)<br/>
     
- 2) User Details (URL : user-detail/username);
-    i. User Details
-    ![picture](img/task_user_details.png)
+ 2) User Details (URL : user-detail/username);<br/>
+    i. User Details<br/>
+    ![picture](src/assets/img/task_user_details.png)<br/>
     
- 3) Repositories List (URL : repositories/username);
-    i. List of Repositories
-    ![picture](img/task_user_repo.png)
+ 3) Repositories List (URL : repositories/username);<br/>
+    i. List of Repositories<br/>
+    ![picture](src/assets/img/task_user_repo.png)<br/>
     
- 3) Rrepository Details (URL : repository-detail/username/repo);
-    i.Repository Details
-    ![picture](img/task_repo_details.png)
+ 3) Rrepository Details (URL : repository-detail/username/repo);<br/>
+    i.Repository Details<br/>
+    ![picture](src/assets/img/task_repo_details.png)<br/>
     
   4) I added all pages screen short to img folder inside.
 
