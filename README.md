@@ -28,19 +28,19 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
  1) Home page (URL:/users);<br/>
     i. List of Users<br/>
     
-    ![picture](src/assets/img/task_user_list.png)<br/>
+    ![picture](src/assets/img/task_user_list.PNG)<br/>
     
  2) User Details (URL : user-detail/username);<br/>
     i. User Details<br/>
-    ![picture](src/assets/img/task_user_details.png)<br/>
+    ![picture](src/assets/img/task_user_details.PNG)<br/>
     
  3) Repositories List (URL : repositories/username);<br/>
     i. List of Repositories<br/>
-    ![picture](src/assets/img/task_user_repo.png)<br/>
+    ![picture](src/assets/img/task_user_repo.PNG)<br/>
     
  3) Rrepository Details (URL : repository-detail/username/repo);<br/>
     i.Repository Details<br/>
-    ![picture](src/assets/img/task_repo_details.png)<br/>
+    ![picture](src/assets/img/task_repo_details.PNG)<br/>
     
   4) I added all pages screen short to img folder inside.
 
