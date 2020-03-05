@@ -6,13 +6,13 @@ import { environment } from '../../environments/environment';
 })
 export class CitGlobalContantsService {
 
-   // baseUrl
+  // baseUrl
   baseUrl = environment.baseUrl;
 
-  //User List
-  userList: string = this.baseUrl + '/users';
+  //userUrl
+  user: string = this.baseUrl + '/users';
 
-  userRepo: string = this.baseUrl + '/repo';
-
+  //repoUrl
+  repo: string = this.baseUrl + '/repos';
 
 }

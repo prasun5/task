@@ -8,29 +8,33 @@ import { ApiService } from '../core/services/api.service';
 })
 export class UserListComponent implements OnInit {
 
-   isLoading: boolean;
-   users: any;
+  isLoading: boolean;
+  users: any;
+  search: string;
 
   constructor(
-  	  private apiService: ApiService,
-  	) { }
+    private apiService: ApiService
+  ) { }
 
   ngOnInit() {
-  	this.userList();
+    this.userList();
   }
 
-  userList(){
-  	this.isLoading = true;
-  	this.apiService.getUsers()
+  userList() {
+    this.isLoading = true;
+    this.apiService.getUsers()
       .subscribe(
         data => {
-        	console.log(data);
           this.users = data;
           this.isLoading = false;
         },
         error => {
           this.isLoading = false;
         });
+  }
+
+  updateSearchModel(value) {
+    this.search = value;
   }
 
 }

@@ -15,8 +15,19 @@ export class ApiService {
 
 
   getUsers() {
-    return this.httpClient.getRequest(this.globalConst.userList, {});
+    return this.httpClient.getRequest(this.globalConst.user + '?since=1&per_page=100', {});
   }
- 
- 
+
+  getUser(userName: string) {
+    return this.httpClient.getRequest(this.globalConst.user + '/' + userName, {});
+  }
+
+  getRepos(userName: string) {
+    return this.httpClient.getRequest(this.globalConst.user + '/' + userName + '/repos', {});
+  }
+
+  getRepoDetails(fullName: string) {
+    return this.httpClient.getRequest(this.globalConst.repo + '/' + fullName, {});
+  }
+
 }

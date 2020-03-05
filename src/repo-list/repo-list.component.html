@@ -1,1 +1,85 @@
-<p>repo-list works!</p>
+<div class="container py-5">
+
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="row page-titles ">
+        <div class="col-md-5 align-self-center">
+            <h3 class="text-themecolor">Repositories</h3>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/">Users</a></li>
+                <li class="breadcrumb-item active">Repositories</li>
+            </ol>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+
+    <!-- End -->
+    <app-loader *ngIf="isLoading" class="loading-contain"></app-loader>
+    <div class="row pt-5">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex py-3">
+                        <div>
+                            <h5 class="card-title">Repositories List </h5>
+
+                        </div>
+                        <div class="ml-auto">
+                            <h5 class="card-title"> Results : {{repos?.length}}</h5>
+                        </div>
+
+                    </div>
+                    <div class="table-responsive m-t-20 no-wrap">
+                        <table class="table vm no-th-brd pro-of-month">
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th colspan="2"> Name</th>
+                                    <th>User Name</th>
+                                    <th>Repository Type</th>
+                                    <th>User Type</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let user of repos; index as i">
+                                    <td>{{i + 1}}</td>
+                                    <td style="width:50px;">
+                                        <span class="round">
+                                            <img [src]="user.owner.avatar_url" [alt]="user.owner.avatar_url">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <h6 class="pt-2">{{user?.name | titlecase}}</h6>
+                                    </td>
+                                    <td>
+                                        <h6 class="pt-2">{{user?.owner?.login | titlecase}}</h6>
+                                    </td>
+
+                                    <td>
+                                        <h6 class="pt-2">{{user?.private == false ? 'Public' : 'Private'}}
+                                        </h6>
+                                    </td>
+                                    <td>
+                                        <p class="pt-2">{{user?.owner?.type}}</p>
+                                    </td>
+
+                                    <td>
+                                        <p class="pt-2">
+                                            <a routerLink="/repository-detail/{{user.full_name}}" class="font-weight-bold pt-2 my-2">
+                                                Repository
+                                            </a>
+                                        </p>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

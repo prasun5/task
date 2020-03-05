@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoaderComponent } from './loader/loader.component';
 
 
 @NgModule({
@@ -11,10 +12,11 @@ import { FooterComponent } from './footer/footer.component';
     CommonModule,
     RouterModule,
   ],
-  declarations: [HeaderComponent, FooterComponent],
+  declarations: [HeaderComponent, FooterComponent, LoaderComponent],
   exports: [
     HeaderComponent,
     FooterComponent,
+    LoaderComponent
   ],
   providers: []
 })

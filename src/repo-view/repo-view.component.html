@@ -1,1 +1,133 @@
-<p>repo-view works!</p>
+<div class="container">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="row page-titles ">
+        <div class="col-md-5 align-self-center">
+            <h3 class="text-themecolor">Repository Details</h3>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/">Users</a></li>
+                <li class="breadcrumb-item"><a routerLink="/repositories/{{repoDetails?.owner?.login}}">Repositories</a>
+                </li>
+                <li class="breadcrumb-item active">Repository</li>
+            </ol>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Start Page Content -->
+    <!-- ============================================================== -->
+    <!-- Row -->
+    <app-loader *ngIf="isLoading" class="loading-contain"></app-loader>
+    <div class="row pt-4">
+        <!-- Column -->
+        <div class="col-lg-12 col-xlg-3 col-md-5">
+            <div class="card">
+                <div class="card-body text-center">
+                    <div class="m-t-30 mb-2"> <img [src]="repoDetails?.owner?.avatar_url" class="img-circle" width="150">
+                        <h4 class="card-title m-t-10 mt-4">{{repoDetails?.name | titlecase}}</h4>
+                        <h6 class="card-subtitle">{{repoDetails?.owner?.login | titlecase}}</h6>
+                        <h6 class="card-subtitle pt-3">{{repoDetails?.description}}</h6>
+                        <div class="row text-center justify-content-md-center mt-4">
+                            <div class="col-2">
+                                <a href="javascript:void(0)" class="link">
+                                    <small>Language</small>
+                                    <div class="font-medium">{{repoDetails?.language}}</div>
+                                </a>
+                            </div>
+                            <div class="col-2">
+                                <a href="javascript:void(0)" class="link">
+                                    <small>Watch Repositories</small>
+                                    <div class="font-medium">{{repoDetails?.watchers}}</div>
+                                </a>
+                            </div>
+                            <div class="col-1">
+                                <a href="javascript:void(0)" class="link">
+                                    <small>Forks</small>
+                                    <div class="font-medium">{{repoDetails?.forks}}</div>
+                                </a>
+                            </div>
+                            <div class="col-1">
+                                <a href="javascript:void(0)" class="link">
+                                    <small>Subscribe</small>
+                                    <div class="font-medium">{{repoDetails?.subscribers_count}}</div>
+                                </a>
+                            </div>
+                            <div class="col-2">
+                                <a href="javascript:void(0)" class="link">
+                                    <small>Open issues</small>
+                                    <div class="font-medium">{{repoDetails?.open_issues}}</div>
+                                </a>
+                            </div>
+                            <div class="col-1">
+                                <a href="javascript:void(0)" class="link">
+                                    <small>Network</small>
+                                    <div class="font-medium">{{repoDetails?.network_count}}</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Column -->
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <h5>More Info</h5>
+                        <hr>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <label>Size:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>{{repoDetails?.size}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>key:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>{{repoDetails?.license?.key}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Name:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>{{repoDetails?.license?.name}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Spdx Id:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>{{repoDetails?.license?.spdx_id}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Url:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p><a href="{{repoDetails?.license?.url}}" target="_blank">Link</a> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Row -->
+    <!-- ============================================================== -->
+    <!-- End PAge Content -->
+    <!-- ============================================================== -->
+</div>

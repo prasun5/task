@@ -1,0 +1,33 @@
+.text-themecolor {
+    color: #20aee3 !important;
+}
+
+.page-titles {
+    padding-top: 80px;
+    .breadcrumb {
+        padding: 0px;
+        margin-bottom: 0px;
+        background: transparent;
+        font-size: 12px;
+    }
+}
+
+.page-titles .breadcrumb li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.page-titles .breadcrumb li a {
+    color: #67757c;
+}
+
+.breadcrumb-item.active {
+    color: #007b5e;
+}
+
+.page-titles .breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+    content: "\f054";
+    font-family: FontAwesome;
+    color: #a6b7bf;
+    font-size: 11px;
+}
