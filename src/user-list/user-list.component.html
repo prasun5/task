@@ -1,0 +1,42 @@
+<div class="container py-5">
+	<!-- For demo purpose -->
+	<div class="row text-center my-5">
+		<div class="col-lg-7 mx-auto">
+			<h4 class="display-4">Github User List</h4>
+			<hr>
+		
+	</div>
+</div>
+<!-- End -->
+<div class="row">
+	<div class="col-lg-8 mx-auto">
+		<!-- List group-->
+		<ul class="list-group shadow">
+			<!-- list group item-->
+			<li class="list-group-item" *ngFor="let user of users">
+				<!-- Custom content-->
+				<div class="media align-items-lg-center flex-column flex-lg-row p-3">
+					<div class="media-body order-2 order-lg-1">
+						<small>Name:</small>
+						<h5 class="mt-0 font-weight-bold mb-2">{{user?.login | titlecase}}</h5>
+						<p class="font-italic text-muted mb-0 small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit fuga autem maiores necessitatibus.</p>
+						<div class="d-flex align-items-center justify-content-between mt-1">
+							<a href="" class="font-weight-bold my-2">View Repository</a>
+							<ul class="list-inline small">
+								<li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+								<li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+								<li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+								<li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+								<li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
+							</ul>
+						</div>
+					</div><img [src]="user.avatar_url" [alt]="user.avatar_url" width="200" class="ml-lg-5 order-1 order-lg-2">
+				</div>
+				<!-- End -->
+			</li>
+			<!-- End -->
+		</ul>
+		<!-- End -->
+	</div>
+</div>
+</div>
